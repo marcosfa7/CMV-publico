@@ -21,6 +21,8 @@ header{
   list-style: none;
   padding: 0;
   display: flex;/*Coloca los li en una fila*/
+  border-top-color: white;
+  border-top-width: 1px;
 }
 .menu li{
   border-right: 1px solid white;
@@ -115,4 +117,19 @@ figcaption{
 	margin-left: 50%;
   text-shadow: 2px 2px #000000;
   width: 96.5%;
+}
+
+:root {
+    --fuenteDia : #ff0000;
+    --fuenteNoche: #cccccc;
+}
+
+.dia {
+  color: var(--fuenteDia);
+  background-color: gray;
+}
+
+.noche {
+  color: var(--fuenteNoche);
+  background-color: #bfbfbf;
 }

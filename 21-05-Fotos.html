@@ -43,16 +43,21 @@ fecha: Marzo 2021
 		  grid-gap: 10px;
 		  width: 100vw;
 		  height: 100vh;
+		  
 		}
 		
 		.encabezado {
 		  grid-column: 1 / span 4;
 		  grid-row: 1 / span 1;
+		  padding: 4px;
 		}
 		
 		.migas {
 		  grid-column: 1 / span 4;
 		  grid-row: 2 / span 1;
+		  border-top-style: solid;
+		  border-bottom-width: 2px;
+		  border-bottom-color: white;
 		}
 		
 		.lado {
@@ -163,7 +168,11 @@ fecha: Marzo 2021
 			<div>
 				<p id="parrafo1">NO TE LAS PUEDES PERDER</p>
 			</div>
-      		 
+			<div>
+				<p id="texto" >Pinche en el siguiente botón para cambiar de color</p>
+
+				<button>Alternar colores</button>
+			</div>
 	  		</main>
   			<!-- pie de pagina -->
   			<footer>
@@ -171,11 +180,14 @@ fecha: Marzo 2021
 	  		</footer>
 
 	  		<script>
-			// seccion de codigo javascript 
+			// seccion de codigo javascript
+				$("button").click(function(){
+					$("body,p").toggleClass("noche");
+		 		 });
 
 	  		</script>
     	</div>
-		<div class="pie">Página realizada por Marcos</div>
+		<div class="pie">&copy; 2021 Página realizada por Marcos</div>
 	</div>
 
 
