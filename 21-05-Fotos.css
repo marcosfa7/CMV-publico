@@ -83,7 +83,17 @@ figcaption{
 @media screen and (max-width: 600px){
   figure{
     height: 200px;
-  }
+    
+    }
+    .lado{
+    display: none;
+}
+.migas{
+    display: none;
+}
+.contenido{
+    display: block;
+}
 }
 #contenedor{
   display: flex;/*Hace que todos los elementos contenidos aquí tomen una disposición, por defecto será en fila(row) a no ser que con un flex-direction le indiquemos lo contrario*/
@@ -132,4 +142,15 @@ figcaption{
 .noche {
   color: var(--fuenteNoche);
   background-color: #bfbfbf;
+}
+.boton{
+    float:right;
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 20px;
+    color: #ffffff;
+    background-color: #1883ba;
+    border-radius: 6px;
+    border: 2px solid #0016b0;
 }
