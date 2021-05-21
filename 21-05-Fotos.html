@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!--
+HTML
+web o pagina:
+autor: Carlos Boni
+fecha: Marzo 2021
+-->
+
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	
+	<!-- importante SEO para la etiqueta del navegador -->
+	<title>Titulo en Etiqueta del Navegador</title>
+	
+	<!-- una fuente de Google -->
+	<link rel="preconnect" href="https://fonts.gstatic.com"/>
+	<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet"/>
+	
+	<!-- una hoja de estilos externa-->
+	
+	<!-- una hoja de estilos personalizada-->
+	<link href="21-05-Fotos.css" rel="stylesheet"/>
+	
+	<!-- iconos u otros elementos externos -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+	
+	<!-- solo aquellos estilos que solo aplican a esta pagina -->
+    <style>
+		*{
+		  box-sizing: border-box;
+		  padding: 0;
+		  margin: 0;
+      
+		}
+		
+		.marco {
+		  display: grid;
+		   grid-template-columns: 250px repeat(2,1fr) 200px;
+		  grid-template-rows: 40px 40px auto 40px;
+		  grid-gap: 10px;
+		  width: 100vw;
+		  height: 100vh;
+		}
+		
+		.encabezado {
+		  grid-column: 1 / span 4;
+		  grid-row: 1 / span 1;
+		}
+		
+		.migas {
+		  grid-column: 1 / span 4;
+		  grid-row: 2 / span 1;
+		}
+		
+		.lado {
+			background-color: gray;
+			
+		  border-color: white;
+		  grid-column: 4 / span 1;
+		  grid-row: 3 / span 1;
+		}
+		
+		.contenido {
+		   grid-column: 1 / span 3;
+		  	grid-row: 3 / span 1;
+      		/*overflow: scroll;*//*solamente desplaza en scroll este apartado*/
+      		font-size: 1vw;
+		}
+		
+		.pie {
+		  grid-column: 1 / span 4;
+		  grid-row: 4 / span 1;
+		}
+    .imgD{
+      float:right;
+      margin:10px;
+      width: 35%;
+      height: auto;
+      object-fit: cover;
+    }
+
+    .imgI{
+      float: left;
+      margin: 10px;
+      clear: right;
+      width: 200px;
+      height: auto;
+      object-fit: cover;
+    }
+
+    @media screen and (max-width:600px){
+      .contenido{
+        font-size: 12px;
+      }
+      
+    }
+
+	</style>
+	
+	<!-- scripts externos de librerias que usaremos, por ejemplo Bootstrap o JQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	
+	<!-- scripts externos de desarrollo propio en Javascript o JQuery -->
+	<script src="00-modelo.js"></script>
+	
+	<!-- scripts personalizados Javascript o JQuery -->
+	<script>
+		// aqui el codigo ...
+	</script>
+</head>
+
+
+<body>
+
+	<div class="marco">
+		<div class="encabezado"><h1>SERIES TOP</h1></div>
+		<div class="migas">
+			<nav class="menu">
+				<ul>
+					<li><a>Página principal</a></li>
+					<li><a>Serie Perdidos</a></li>
+					<li><a>Serie GoT</a></li>
+					<li><a>Serie BBT</a></li>
+			</ul>
+			</nav>
+		</div>
+		<div class="lado">
+			<p>Aquí vamos a mostrar publicidad</p>
+		</div>
+		<div class="contenido">
+			<!-- cabecera de pagina -->
+			<header>
+		    
+			</header>
+			<!-- bloque de contenido de la pagina -->
+			<main>
+			<div id="contenedor">
+				<figure class="figuras">
+					<a href="imagenes/perdidos.jpg" download>
+						<img src="imagenes/perdidos.jpg" alt="perdidos">
+					</a>
+					<figcaption class="texto">Perdidos</figcaption>
+				</figure>
+				<figure class="figuras">
+					
+					<a href="imagenes/jdt.jpg" download>
+						<img src="imagenes/jdt.jpg" alt="juego de tronos">
+					</a>
+					<figcaption class="texto">Juego de Tronos</figcaption>
+					<!---->
+				</figure>
+				<figure class="figuras">
+					
+					<a href="imagenes/bigbangtheory.jpg" download>
+						<img src="imagenes/bigbangtheory.jpg" alt="big bang theory">
+					</a>
+					<figcaption class="texto">Big Bang Theory</figcaption>
+				</figure>
+			</div>
+			<div>
+				<p id="parrafo1">NO TE LAS PUEDES PERDER</p>
+			</div>
+      		 
+	  		</main>
+  			<!-- pie de pagina -->
+  			<footer>
+		  
+	  		</footer>
+
+	  		<script>
+			// seccion de codigo javascript 
+
+	  		</script>
+    	</div>
+		<div class="pie">Página realizada por Marcos</div>
+	</div>
+
+
+</body>
+</html>
