@@ -20,7 +20,7 @@ header{
   margin: 0;
   list-style: none;
   padding: 0;
-  display: flex;/*Coloca los li en una fila*/
+  display: flex;/*Coloca los li en una fila, la propiedad display reemplaza a float*/
   border-top-color: white;
   border-top-width: 1px;
 }
@@ -32,7 +32,7 @@ header{
 
 }
 .menu li a{
-  display: block;
+  display: block;/*Para que el enlace tenga efecto en todo el rectángulo*/
   padding:10px 20px;
   color: #ffffff;
   text-decoration: none;
@@ -43,9 +43,11 @@ img {
   object-fit: cover;
   padding: 10px;
   border-radius: 10%;
+  
 }
 img:hover{
   -webkit-transform: scale(1.05 , 1.05);
+  
 }
 figure{
   width: 100%;
@@ -70,6 +72,7 @@ figcaption{
   text-shadow: 5px 5px 5px #ffffff;
 }
 
+
 @media screen and (max-width: 900px){
   figure{
     height: 300px;
@@ -78,6 +81,10 @@ figcaption{
     position: absolute;
     background: #ffffff;
   }
+  div#contenedor {
+    display: block;
+}
+
 }
 
 @media screen and (max-width: 600px){
