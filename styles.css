@@ -1,0 +1,164 @@
+:root {
+  --colorFondo: #000000;
+}
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+  font-family: sans-serif;
+}
+body {
+  background: var(--colorFondo);
+  color: white;
+}
+header {
+  width: 100%;
+  background: #444444;
+}
+.menu ul {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+  display: flex;
+  /*Coloca los li en una fila, la propiedad display reemplaza a float*/
+  border-top-color: white;
+  border-top-width: 1px;
+}
+.menu li {
+  border-right: 1px solid white;
+}
+.menu li:hover {
+  background: grey;
+}
+.menu li a {
+  display: block;
+  /*Para que el enlace tenga efecto en todo el rectángulo*/
+  padding: 10px 20px;
+  color: #ffffff;
+  text-decoration: none;
+}
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  padding: 10px;
+  border-radius: 10%;
+}
+img:hover {
+  -webkit-transform: scale(1.05, 1.05);
+}
+figure {
+  width: 100%;
+  height: 300px;
+  display: inline-block;
+  margin: 0px;
+  padding: 0px;
+}
+figcaption {
+  padding: 10px;
+}
+#parrafo1 {
+  font-family: 'Pattaya', sans-serif;
+  font-size: 400%;
+  text-align: center;
+  color: white;
+}
+#parrafo1:hover {
+  text-shadow: 5px 5px 5px #ffffff;
+}
+@media screen and (max-width: 900px) {
+  figure {
+    height: 300px;
+  }
+  .menu {
+    position: absolute;
+    background: #ffffff;
+  }
+  div#contenedor {
+    display: block;
+  }
+}
+@media screen and (max-width: 600px) {
+  figure {
+    height: 200px;
+  }
+  .lado {
+    display: none;
+  }
+  .migas {
+    display: none;
+  }
+  .contenido {
+    display: block;
+  }
+}
+#contenedor {
+  display: flex;
+  /*Hace que todos los elementos contenidos aquí tomen una disposición, por defecto será en fila(row) a no ser que con un flex-direction le indiquemos lo contrario*/
+  flex-direction: row;
+  /*Es su disposición por defecto, no hace falta ponerla aquí*/
+  position: relative;
+  /*Si al padre de un elemento, le ponemos la propiedad relative(como en este caso), los elementos hijos que serán absolute solo se pondrán saltar el flujo hasta su elemento padre relative. hasta aquí*/
+  top: 0px;
+  left: 0px;
+}
+.figuras {
+  /*display: flex;*/
+  /*No hace nada aquí*/
+  position: relative;
+  top: 0px;
+  left: 0px;
+  object-fit: cover;
+}
+.texto {
+  position: absolute;
+  bottom: 3%;
+  left: 0%;
+  object-fit: contain;
+  /*no sé qué hace*/
+  text-align: center;
+  transform: translate(-50%, 0%);
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.3);
+  /*border-radius: 25px;*/
+  border-bottom-left-radius: 10%;
+  border-bottom-right-radius: 10%;
+  background: rgba(255, 255, 255, 0.3);
+  font-size: 1.5em;
+  margin-left: 50%;
+  text-shadow: 2px 2px #000000;
+  width: 96.5%;
+}
+:root {
+  --fuenteDia: #ff0000;
+  --fuenteNoche: #cccccc;
+}
+.dia {
+  color: var(--fuenteDia);
+  background-color: gray;
+}
+.noche {
+  color: var(--fuenteNoche);
+  background-color: #bfbfbf;
+}
+.boton {
+  float: right;
+  text-decoration: none;
+  padding: 10px;
+  font-weight: 600;
+  font-size: 20px;
+  color: #ffffff;
+  background-color: #1883ba;
+  border-radius: 6px;
+  border: 2px solid #0016b0;
+}
+body {
+  background-color: red;
+}
+h1 {
+  font-size: 30px;
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+}

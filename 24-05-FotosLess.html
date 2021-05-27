@@ -22,88 +22,14 @@ fecha: Marzo 2021
 	<!-- una hoja de estilos externa-->
 	
 	<!-- una hoja de estilos personalizada-->
-	<link href="21-05-Fotos.css" rel="stylesheet"/>
+	<link href="24-05-FotosLess.css" rel="stylesheet"/>
 	
 	<!-- iconos u otros elementos externos -->
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
 	
 	<!-- solo aquellos estilos que solo aplican a esta pagina -->
     <style>
-		*{
-		  box-sizing: border-box;
-		  padding: 0;
-		  margin: 0;
-      
-		}
 		
-		.marco {
-		  display: grid;
-			grid-template-columns: 250px repeat(2,1fr) 200px;
-		  grid-template-rows: 40px 40px auto 40px;
-		  grid-gap: 10px;
-		  width: 100vw;
-		  height: 100vh;
-		  
-		}
-		
-		.encabezado {
-		  grid-column: 1 / span 4;
-		  grid-row: 1 / span 1;
-		  padding-left: 4px;
-		  padding-top: 4px;
-		  background-color: #5e3208;
-		}
-		
-		.migas {
-		  grid-column: 1 / span 4;
-		  grid-row: 2 / span 1;
-		  border-top-style: solid;
-		  border-bottom-width: 2px;
-		  border-bottom-color: white;
-		}
-		
-		.lado {
-			background-color: gray;
-			
-		  border-color: white;
-		  grid-column: 4 / span 1;
-		  grid-row: 3 / span 1;
-		}
-		
-		.contenido {
-		   grid-column: 1 / span 3;
-		  	grid-row: 3 / span 1;
-      		/*overflow: scroll;*//*solamente desplaza en scroll este apartado*/
-      		font-size: 1vw;
-		}
-		
-		.pie {
-		  grid-column: 1 / span 4;
-		  grid-row: 4 / span 1;
-		}
-    .imgD{
-      float:right;
-      margin:10px;
-      width: 35%;
-      height: auto;
-      object-fit: cover;
-    }
-
-    .imgI{
-      float: left;
-      margin: 10px;
-      clear: right;
-      width: 200px;
-      height: auto;
-      object-fit: cover;
-    }
-
-    @media screen and (max-width:600px){
-      .contenido{
-        font-size: 12px;
-      }
-      
-    }
 
 	</style>
 	
