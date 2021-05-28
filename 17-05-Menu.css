@@ -27,7 +27,6 @@ figure{
 
 #imagenCambios{
   border-image: initial;
-  border: 1px solid blue;
 }
 
 #imagenCambios:hover{
