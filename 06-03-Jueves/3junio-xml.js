@@ -13,7 +13,7 @@
 // un array con un elemento por cada usuario del XML
 // en realidad será un array de arrays, una matriz bidimensional
 let registrados = [];
-
+var peliculas =[];//Array con mis elementos
 
 function leerXML() {
   // lee desde GitHub.
@@ -23,7 +23,7 @@ function leerXML() {
       cargarArray(this);
     }
   };
-  xhr.open("GET", "https://marcosfa7.github.io/CMV-publico/", true);
+  xhr.open("GET", "https://marcosfa7.github.io/CMV-publico/06-03-Jueves/datos.xml", true);
   // xhr.open("GET", "datos.xml", true);
   xhr.send();
 }
@@ -41,29 +41,29 @@ function cargarArray(xml) {
   // tabla es una variable string que contiene codigo
   // html para poder mostrar en pantalla el XML con formato tabla
 
-  let tabla = "<table><tr><th>NOMBRE</th><th>FOTO</th></tr>";
+  let tabla = "<table><tr><th>NOMBRE</th><th>FOTOS</th></tr>";
   for (i = 0; i < x.length; i++) {
     // leo las etiquetas que me interesan del objeto
     let usrNom = x[i].getElementsByTagName("nombre")[0].childNodes[0].nodeValue;
-    let usrPsw = x[i].getElementsByTagName("foto")[0].childNodes[0].nodeValue;
+    let usrFoto = x[i].getElementsByTagName("foto")[0].childNodes[0].nodeValue;
     // actualizo la tabla de visualización
     tabla += "<tr><td>" + usrNom + "</td><td>" + usrFoto + "</td></tr>";
     // actualizo el array bidimensional con los usuarios registrados
-    let elemento = [usrNom, usrFoto];
-    datos.push(elemento;
+    elemento = [usrNom, usrFoto];
+    peliculas.push(elemento);
   }
   tabla += "</table>"
   document.getElementById("mensaje").innerHTML = tabla;
 
-  // muestro en consola el array de usuarios registrados
+  // muestro en consola el array de orla
   // una vez depurado, comentamos el codigo siguiente
-  //  registrados.forEach((usuario) => {
-  //    usuario.forEach((datos) => {
-  //        console.log(datos);
-  //     });
-  //});
+    peliculas.forEach((elemento) => {
+      elemento.forEach((datos) => {
+          console.log(datos);
+       });
+  });
 }
-
+/*
 function ascNombre() {
   //Ordeno primero la matriz global ascendente por nombre
   datos.sort(
@@ -72,7 +72,8 @@ function ascNombre() {
   );
   mostrar();
 }
-
+*/
+/*
 function mostrarFoto() {
   //obtenemos el usuario del campo input y
   //validamos que exista en el array
@@ -81,20 +82,20 @@ function mostrarFoto() {
   //mostrar la clave
 
   //sintaxis jQuery: nombre = $("#nom").val()
-  let inputClave =document.getElementById("nom");
-  let usuarios=[];
-  for (i = 0; i < datos.length; i++) {
+  let inputFoto =document.getElementById("nom");
+  let elementos=[];
+  for (i = 0; i < orla.length; i++) {
     // leo las etiquetas que me interesan del objeto
-    usrNom = datos[i][0];
-    usrFotos = datos[i][1];
-    if(usrNom==inputClave.value){
-      elementos.push(datos[i]);
+    usrNom = orla[i][0];
+    usrFotos =orla[i][1];
+    if(usrNom==inputFoto.value){
+      elementos.push(orla[i]);
       break;    
     }
     
   }
   if (elementos.length>0){
-    tabla = "<table><tr><th>EMPLEADO</th><th>CLAVE</th></tr>";
+    tabla = "<table><tr><th>NOMBRE</th><th>FOTO</th></tr>";
     elementos.forEach((usuario) => {
       tabla += "<tr><td>" + usuario[0] + "</td><td>" + usuario[1] + "</td></tr>";
     });
@@ -106,7 +107,8 @@ function mostrarFoto() {
   
 
 }
-
+*/
+/*
 function desClave() {
   //Ordeno la matriz global
   //descendente por clave
@@ -116,27 +118,27 @@ function desClave() {
   );
   mostrar();
 }
-
+*/
 
 function mostrar() {
   // muestro en pantalla el array de usuarios registrados
   // en formato tabla en el id solicitado
-  let tabla = "";
-  datos.forEach((elemento) => {
-    elemento.forEach((datos) => {
-      tabla = "<table><tr><th>USUARIO</th><th>FOTO</th></tr>";
-      for (i = 0; i < datos.length; i++) {
+  let bloque = "<section id=\"miOrla\">";//bloque de imagenes que mostraremos en pantalla
+  orla.forEach((elemento) => {
+    elemento.forEach((orla) => {
+      bloque = "";
+      for (i = 0; i < orla.length; i++) {
         // leo las etiquetas que me interesan del objeto
-        usrNom = datos[i][0];
-        usrFoto = datos[i][1];
+        elemTit = orla[i][0];
+        elemImg = orla[i][1];
         // actualizo la tabla de visualización
-        tabla += "<tr><td>" + usrNom + "</td><td>" + usrFoto + "</td></tr>";
+        bloque += "<div class=\"divOrla\"><img class=\"imgOrla\" src=\" + elemImg + \"/></div>";
         // actualizo el array bidimensional con los usuarios registrados
       }
-      tabla += "</table>"
+      bloque += "</section>"
     });
   });
-  document.getElementById("solicitado").innerHTML = tabla;
+  document.getElementById("mensaje2nose").innerHTML = bloque;
 }
 
 
