@@ -23,7 +23,7 @@ function leerXML() {
       cargarArray(this);
     }
   };
-  xhr.open("GET", "https://github.com/marcosfa7/CMV-publico/blob/main/06-03-Jueves/registrados2.xml", true);
+  xhr.open("GET", "https://github.com/marcosfa7/CMV-publico/blob/main/06-03-Jueves/datos.xml", true);
   // xhr.open("GET", "registrados2.xml", true);
   xhr.send();
 }
@@ -31,26 +31,26 @@ function leerXML() {
 function cargarArray(xml) {
   var i;
   var usrNom;
-  var usrPsw;
-  var usuario = [];
+  var usrFoto;
+  var elemento = [];
   var xmlDoc = xml.responseXML;
 
-  var x = xmlDoc.getElementsByTagName("usuario");
+  var x = xmlDoc.getElementsByTagName("elemento");
   // obtenemos algo así como x=[{USR1},{USR2}...,{CANDIDO}]
 
   // tabla es una variable string que contiene codigo
   // html para poder mostrar en pantalla el XML con formato tabla
 
-  let tabla = "<table><tr><th>EMPLEADO</th><th>CLAVE</th></tr>";
+  let tabla = "<table><tr><th>NOMBRE</th><th>FOTO</th></tr>";
   for (i = 0; i < x.length; i++) {
     // leo las etiquetas que me interesan del objeto
     let usrNom = x[i].getElementsByTagName("nombre")[0].childNodes[0].nodeValue;
-    let usrPsw = x[i].getElementsByTagName("clave")[0].childNodes[0].nodeValue;
+    let usrPsw = x[i].getElementsByTagName("foto")[0].childNodes[0].nodeValue;
     // actualizo la tabla de visualización
-    tabla += "<tr><td>" + usrNom + "</td><td>" + usrPsw + "</td></tr>";
+    tabla += "<tr><td>" + usrNom + "</td><td>" + usrFoto + "</td></tr>";
     // actualizo el array bidimensional con los usuarios registrados
-    let usuario = [usrNom, usrPsw];
-    registrados.push(usuario);
+    let usuario = [usrNom, usrFoto];
+    datos.push(elemento;
   }
   tabla += "</table>"
   document.getElementById("mensaje").innerHTML = tabla;
