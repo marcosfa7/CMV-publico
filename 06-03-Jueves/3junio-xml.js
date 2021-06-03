@@ -23,7 +23,7 @@ function leerXML() {
       cargarArray(this);
     }
   };
-  xhr.open("GET", "https://github.com/marcosfa7/CMVprivado/blob/main/Ejercicios/06-03-Jueves/registrados2.xml", true);
+  xhr.open("GET", "https://github.com/marcosfa7/CMV-publico/blob/main/06-03-Jueves/registrados2.xml", true);
   // xhr.open("GET", "registrados2.xml", true);
   xhr.send();
 }
