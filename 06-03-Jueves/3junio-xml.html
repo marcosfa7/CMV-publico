@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!--
+HTML
+web o pagina: Arrays con JS
+entorno: curso Accenture-CMV
+autor: Carlos Boni
+fecha: 31 Mayo 2021
+-->
+
+<head>
+	<meta charset="UTF-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+	<!-- polyfill para soportar CSS3 Media Queries en MS explorer viejos -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	  <!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	  <![endif]-->
+	  
+	<!-- importante SEO para la etiqueta del navegador -->
+	<title>CMS-Accenture - Arrays con JavaScript</title>
+	
+	<!-- una fuente de Google -->
+	<link rel="preconnect" href="https://fonts.gstatic.com"/>
+	<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet"/>
+	
+	<!-- una hoja de estilos externa-->
+	
+	<!-- una hoja de estilos personalizada-->
+	<link href="31mayo-xml.css" rel="stylesheet"/>
+	
+	<!-- iconos u otros elementos externos -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+	
+
+	<!-- solo aquellos estilos que solo aplican a esta pagina -->
+    <style>
+	</style>
+	
+	<!-- scripts externos de librerias que usaremos, por ejemplo Bootstrap o JQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	
+	<!-- scripts externos de desarrollo propio en Javascript o JQuery -->
+	<script src="31mayo-xml.js"></script>
+	
+	<!-- scripts personalizados Javascript o JQuery -->
+	<script>
+		// aqui el codigo ...
+	</script>
+</head>
+
+
+<body onload="leerXML()">
+
+	<!-- cabecera de pagina -->
+	<header>
+		<h1>CMS-Accenture - Arrays con JavaScript</h1>
+		<h2> cargar desde un XML </h2>
+		<br/>
+	</header>
+	
+	<!-- bloque de contenido de la pagina -->
+	<main>
+		
+		<button onclick="ascNombre()">Mostrar XML ascendente por Nombre</button>
+		<button onclick="desClave()">Mostrar XML descendente por Clave</button>
+		<input id="nom" type="text" placeholder="usr.."/>
+		<button onclick="mostrarClave()">Mostrar clave</button>
+		<br/>
+
+		<p>XML original:</p>
+		<p id="mensaje">...datos originales...</p>
+		<br/>
+		<p>XML ordenado:</p>
+		<p id="solicitado">... datos ordenados ...</p>
+		<br/>
+		<p>CLAVE solicitada:</p>
+		<p id="claveBuscada">... del usuario elegido ...</p>
+
+
+	</main>
+
+
+	<!-- pie de pagina -->
+	<footer>
+		<br/><br/><br/>
+		<div>&copy; 2021 <a href="https://carlosboni.com" target="_blank">Prof. Carlos Boni</a></div>
+	</footer>
+
+	<script>
+		// seccion de codigo javascript 
+
+	</script>
+</body>
+</html>
