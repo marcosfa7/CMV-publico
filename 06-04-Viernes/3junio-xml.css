@@ -12,7 +12,7 @@ Se incluyen los principales SELECTORES SIMPLES; hay más combinaciones...
 */
 
 :root {
-  --azulclaro: #e6f2ff;
+  --verdeclaro: #e6fff2;
 }
 
 * {
@@ -26,7 +26,32 @@ Se incluyen los principales SELECTORES SIMPLES; hay más combinaciones...
 }
 
 body {
-	background: var(--azulclaro); /* Azul al 10% */
+	background: var(--verdeclaro); /* Azul al 10% */
+}
+
+.flex{
+  display: flex;
+  flex-wrap: wrap;
+  
+}
+.container{
+  flex-direction: row;
+  align-content: center;
+  align-items: flex-start;
+  width: 30%;
+  margin: 10px;
+  
+}
+.img{
+  height: 300px;
+  width: 100%;
+}
+img:hover{
+  transform: scale(1.05);
+}
+.text{
+  text-align: center;
+  background-color: rgba(160, 214, 201, 0.5);
 }
 
 div {

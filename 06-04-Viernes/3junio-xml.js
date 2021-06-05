@@ -42,12 +42,15 @@ function cargarArray(xml) {
   // html para poder mostrar en pantalla el XML con formato tabla
 
   let tabla = "<table><tr><th>NOMBRE</th><th>FOTOS</th></tr>";
+  //let tabla2 ="";
   for (i = 0; i < x.length; i++) {
     // leo las etiquetas que me interesan del objeto
     let usrNom = x[i].getElementsByTagName("nombre")[0].childNodes[0].nodeValue;
     let usrFoto = x[i].getElementsByTagName("foto")[0].childNodes[0].nodeValue;
     // actualizo la tabla de visualización
-    tabla += "<tr><td>" + usrNom + "</td><td>" + usrFoto + "</td></tr>";
+    tabla += "<tr><td>" + usrNom + "</td><td>" + usrFoto  + "</td></tr>";
+    //tabla += "<tr><td>" + usrNom + "</td><td>" + "<div class=\"divOrla\"><img class=\'imgOrla\' src=\""+ usrFoto +"\"/></div>" + "</td></tr>";Este es el bueno
+    //tabla2 += "<tr><td>" + "<div class=\"divOrla\"><img class=\'imgOrla\' src=\""+ usrFoto +"\"/></div>" + "</td></tr>";
     // actualizo el array bidimensional con los usuarios registrados
     elemento = [usrNom, usrFoto];
     peliculas.push(elemento);
@@ -121,27 +124,45 @@ function desClave() {
 */
 
 function mostrar() {
+  $( "#mensaje2" ).toggle();
+  //$("#mensaje2").show();
   // muestro en pantalla el array de usuarios registrados
   // en formato tabla en el id solicitado
-  let bloque = "<section id=\"miOrla\">";//bloque de imagenes que mostraremos en pantalla
-  orla.forEach((elemento) => {
-    elemento.forEach((orla) => {
-      bloque = "";
-      for (i = 0; i < orla.length; i++) {
+  let bloque = "<section id=\"miOrla\" class='flex'> ";//bloque de imagenes que mostraremos en pantalla
+  //peliculas.forEach((elemento) => {
+  for (let i=0;i<peliculas.length;i++){
+    //elemento.forEach((orla) => {
+      //bloque = "";
+      //for (i = 0; i < orla.length; i++) {
         // leo las etiquetas que me interesan del objeto
-        elemTit = orla[i][0];
-        elemImg = orla[i][1];
+        let elemTit = peliculas[i][0];
+        let elemImg = peliculas[i][1];
         // actualizo la tabla de visualización
-        bloque += "<div class=\"divOrla\"><img class=\"imgOrla\" src=\" + elemImg + \"/></div>";
+        //bloque += "<div class=\"divOrla\"><img class=\"imgOrla\" src=\" + elemImg + \"/></div>";
+        //tabla += "<tr><td>" + usrNom + "</td><td>" + "<div class=\"divOrla\"><img class=\'imgOrla\' src=\""+ usrFoto +"\"/></div>" + "</td></tr>";
+        //bloque += "<div class=\"divOrla\"><img class=\"imgOrla\" src=\" + elemImg + \"/></div>";
+        bloque +=
+          `<figure class="container">
+            <img class="img" src="${elemImg}">
+            <div class="text">
+              <h3>${elemTit}</h3>
+            </div>
+          </figure>`;
         // actualizo el array bidimensional con los usuarios registrados
-      }
-      bloque += "</section>"
-    });
-  });
-  document.getElementById("mensaje2nose").innerHTML = bloque;
+      //}
+      
+    //});
+  };
+  bloque += "</section>"
+  document.getElementById("mensaje2").innerHTML = bloque;
 }
+/*
+function ocultar(){
+  //$( "#mensaje2" ).toggle();
+  $("#mensaje2").hide();
 
-
+}
+*/
 
       // nombre del primer usuario
       //let indiceCampoNombre=0;
