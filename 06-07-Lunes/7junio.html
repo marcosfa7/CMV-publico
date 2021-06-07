@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!--
+HTML
+web o pagina: Arrays con JS
+entorno: curso Accenture-CMV
+autor: Carlos Boni
+fecha: 31 Mayo 2021
+-->
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<!-- polyfill para soportar CSS3 Media Queries en MS explorer viejos -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	  <![endif]-->
+
+	<!-- importante SEO para la etiqueta del navegador -->
+	<title>CMS-Accenture - Coger Archivos XML</title>
+
+	<!-- una fuente de Google -->
+	<link rel="preconnect" href="https://fonts.gstatic.com" />
+	<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet" />
+
+	<!-- una hoja de estilos externa-->
+
+	<!-- una hoja de estilos personalizada-->
+	<link href="3junio-xml.css" rel="stylesheet" />
+
+	<!-- iconos u otros elementos externos -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+
+
+	<!-- solo aquellos estilos que solo aplican a esta pagina -->
+	<style>
+		video::cue {
+  			background-image: linear-gradient(to bottom, dimgray, lightgray);
+  			color: papayawhip;
+		}
+
+		video::cue(b) {
+  			color: peachpuff;
+		}
+	</style>
+
+	<!-- scripts externos de librerias que usaremos, por ejemplo Bootstrap o JQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	<!-- scripts externos de desarrollo propio en Javascript o JQuery -->
+	<script src="3junio-xml.js"></script>
+
+	<!-- scripts personalizados Javascript o JQuery -->
+	<script>
+		// aqui el codigo ...
+	</script>
+</head>
+
+
+<body onload="leerXML()">
+
+	<!-- cabecera de pagina -->
+	<header>
+		<h1>CMS-Accenture - Video html</h1>
+		<br />
+	</header>
+
+	<!-- bloque de contenido de la pagina -->
+	<main>
+		<video controls crossorigin>
+			<source src="Juego de tronos.mp4" type="video/mp4">
+			<p>Your browser doesn't support HTML5 video. Here is a <a href="Juego de tronos.mp4">link to the video</a> instead.</p>
+			<track kind="subtitles" src="fichero.vtt" srclang="es" label="Spanish">
+		  </video>
+		
+		<audio controls>
+			<source src="pasos de hombre escalera de madera 1.mp3" type="audio/mp3">
+			<source src="pasos de hombre escalera de madera 1.ogg" type="audio/ogg">
+			<p>Your browser doesn't support HTML5 audio. Here is a <a href="pasos de hombre escalera de madera 1.mp3">link to the audio</a> instead.</p>
+		  </audio>
+
+		  <video height="25%" width="20%" controls crossorigin>
+			<source src="https://juanillodg.github.io/CMV-Publica/multimedia/Death Star - 33050.mp4" type="video/mp4">
+			<track kind="subtitles" src="https://juanillodg.github.io/CMV-Publica/stream/subtitles.vtt" srclang="es" label="spanish" default>
+			<p>Your browser doesn't support HTML5 video. Here is a <a href="../multimedia/Death Star - 33050.mp4">link to the video</a> instead.</p>
+		</video>
+
+
+	</main>
+
+
+	<!-- pie de pagina -->
+	<footer>
+		<br /><br /><br />
+		<div>&copy; 2021 <a href="https://carlosboni.com" target="_blank">Prof. Carlos Boni</a></div>
+	</footer>
+
+	<script>
+		// seccion de codigo javascript 
+
+	</script>
+</body>
+
+</html>
