@@ -143,7 +143,7 @@ function mostrar() {
         //bloque += "<div class=\"divOrla\"><img class=\"imgOrla\" src=\" + elemImg + \"/></div>";
         bloque +=
           `<figure class="container">
-            <img class="img" src="${elemImg}">
+            <img class="img2" src="${elemImg}">
             <div class="text">
               <h3>${elemTit}</h3>
             </div>
@@ -171,4 +171,3 @@ function ocultar(){
       //let nomUsr1 = registrados[0][indiceCampoNombre];
       // clave del usuario 3
       //let claUsr3 = registrados[2][indiceCampoClave];
-

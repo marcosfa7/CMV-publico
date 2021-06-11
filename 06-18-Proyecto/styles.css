@@ -10,9 +10,11 @@ o sea al final de este archivo o en la misma pagina html
 Se incluyen los principales SELECTORES SIMPLES; hay más combinaciones...
 
 */
+@import url(https://fonts.googleapis.com/css?family=Montserrat:500);
 
 :root {
   --verdeclaro: #e6fff2;
+  --colorFondo: #000000;
 }
 
 * {
@@ -23,10 +25,150 @@ Se incluyen los principales SELECTORES SIMPLES; hay más combinaciones...
 	box-sizing:border-box;
 	margin:0px;
 	padding:0px;
+  color: white;
 }
 
 body {
-	background: var(--verdeclaro); /* Azul al 10% */
+	
+  background-image: url(https://capturetheatlas.com/wp-content/uploads/2017/12/FOM_1793.jpg);
+
+  background-repeat: no-repeat;
+  /*Para que la imagen no se repita*/
+  background-size: cover;
+  /*La imagen se reescala automáticamente con el cambio de ancho de ventana del navegador*/
+  background-attachment: fixed;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.marco {
+  display: grid;
+  grid-template-columns: 250px repeat(3, 1fr);
+  grid-template-rows: 50px 40px auto 40px;
+  grid-gap: 10px;
+  width: 100vw;
+  height: 100vh;
+}
+
+.encabezado {
+  grid-column: 1 / span 4;
+  grid-row: 1 / span 1;
+}
+
+.migas {
+  grid-column: 1 / span 4;
+  grid-row: 2 / span 1;
+}
+
+.contenedor {
+  grid-column: 1 / span 4;
+  grid-row: 3 / span 1;
+  /*overflow: scroll;*/
+  /*solamente desplaza en scroll este apartado*/
+  font-size: 1vw;
+}
+
+.pie {
+  grid-column: 1 / span 4;
+  grid-row: 4 / span 1;
+}
+
+.conteniente{
+  max-width: 100rem;
+  margin: 0 auto;
+  padding: 0 2rem 2rem;
+}
+
+h2{
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 4rem;
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: center;
+  padding: 3.5rem 0;
+  color: #1a1a1a;
+}
+
+.galeria{
+  display: flex;
+  flex-wrap: wrap;
+  margin: -1rem -1rem;
+}
+
+.galeria-item{
+  height: 300rem;
+  width: 300rem;
+  flex: 1 0 24rem;
+  margin: 1rem;
+  box-shadow: 0.3rem 0.4rem 0.4rem rgba(0,0,0,0.4);
+  overflow: hidden;
+}
+.galeria-imagen:hover{
+  transform: scale(1.15);
+}
+
+@supports(display: grid){
+  .galeria{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(24rem,1fr));
+    grid-gap: 2rem;
+  }
+  .galeria,
+  .galeria-item{
+    margin: 0;
+  }
+}
+
+#carouselExampleIndicators{
+  max-width: 500px;
+  max-height: auto;
+  padding: 10px;
+  margin: auto;
+}
+
+.carousel img {
+  max-width: 500px;
+  max-height: 300px;
+  margin: 20px auto;
+  height: 300px !important;
+}
+
+
+.carousel-caption {
+  background-color: rgba(230, 255, 245, 0.2);
+  max-width: 500px;
+  max-height: 80px;
+  padding: 10px;
+  margin: auto;
+  color: black;
+}
+
+.menu ul {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+  display: flex;
+  /*Coloca los li en una fila, la propiedad display reemplaza a float*/
+  border-top-color: white;
+  border-top-width: 1px;
+}
+
+.menu li {
+  border-right: 1px solid white;
+}
+
+.menu li:hover {
+  background: rgb(230, 255, 245, 0.2);
+
+}
+
+.menu li a {
+  display: block;
+  /*Para que el enlace tenga efecto en todo el rectángulo*/
+  padding: 10px 20px;
+  color: #ffffff;
+  text-decoration: none;
 }
 
 .flex{
@@ -54,71 +196,35 @@ img:hover{
   background-color: rgba(160, 214, 201, 0.5);
 }
 
-div {
-  /* estilos para todos los elementos <div>; */
-  /* estilo:valor; */
-  
-  /* box-sizing:border-box  incluye en las dimensiones de un elemento el espacio del padding y del border. */
-  /* display:flex   da la misma altura a todos los elementos que están en el mismo DIV */
+@media screen and (max-width: 900px){
+  figure{
+    height: 300px;
+  }
+  .menu{
+    position: absolute;
+    background: #ffffff;
+  }
+  div .contenedor {
+    display: block;
 }
 
-.claseUno {
-  /* estilos para todos los elementos que son de la clase .claseUno; */
-  /* estilo:valor; */
 }
 
-.claseUno.claseDos {
-  /* estilos para todos los elementos que son de la clase .claseUno y .claseDos;
-     NO hay espacio entre ambos selectores  */
-  /* estilo:valor; */
+@media screen and (max-width: 600px){
+  figure{
+    height: 200px;
+    
+    }
+    .lado{
+    display: none;
 }
-
-.claseUno .claseDos {
-  /* estilos para todos los elementos de .claseDos que descienden de uno de .claseUno;
-     HAY UN espacio entre ambos selectores  */
-  /* estilo:valor; */
+.migas{
+    display: none;
 }
-
-#esteElemento {
-  /* estilos para el único elemento identificado con este #esteElemento; */
-  /* estilo:valor; */
+.contenido{
+    display: block;
 }
-
-p.claseUno {
-  /* estilos para todos los elementos <p> que son de la clase .claseUno; */
-  /* estilo:valor; */
 }
-
-p,div {
-  /* estilos para todos los elementos que sean <p> o <div>; */
-  /* estilo:valor; */
-}
-
-div > p {
-  /* estilos para todos los elementos que sean <p> que estén dentro (sean hijos de) un <div>; */
-  /* estilo:valor; */
-}
-
-h1 + p {
-  /* estilos para todos los elementos que sean <p> que sean hermanos y estén inmediantamente después de <h1>; */
-  /* estilo:valor; */
-}
-
-/*
-
-pseudoclases, asignarles estilos en este orden llamado LVHA:
-   :link — :visited — :hover — :active.
-   
-Más selectores y documentación:
-pseudo-clases: https://www.w3schools.com/css/css_pseudo_classes.asp
-pseudo-elementos: https://www.w3schools.com/css/css_pseudo_elements.asp
-pseudo-atributos: https://www.w3schools.com/css/css_attribute_selectors.asp
-formularios: https://www.w3schools.com/css/css_form.asp
-posicionamiento: https://www.w3schools.com/css/css_positioning.asp
-selectores: https://www.w3schools.com/cssref/css_selectors.asp
-*/
-
-
 
 
 
