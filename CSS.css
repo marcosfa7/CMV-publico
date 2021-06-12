@@ -1,0 +1,24 @@
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Lucida Sans',Verdana, sans-serif;
+}
+.body {
+	background-color: rgba(155, 35, 55, 0.8);
+}
+#cabecera{
+    background-color: rgb(199, 38, 59);
+    position: relative;
+    box-sizing: content-box;
+    border-radius: 15px;
+    width: 40%;
+    text-align: center;
+    font-size: 10px;
+}
+.lista{
+    padding: 10px;
+    border: 3px solid rgb(199, 38, 59);
+    color: rgb(194, 26, 26);
+    background-color: rgb(255, 255, 255);
+}

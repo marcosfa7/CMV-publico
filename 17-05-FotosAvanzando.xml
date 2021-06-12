@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<orla>
+    <elemento>
+        <nombre>Juego de Tronos</nombre>
+        <foto>https://i.blogs.es/3128a6/juego-tronos/1366_2000.jpeg</foto>
+        <pie>Clan Targaryan</pie>
+        <detalle>Aunque el factor “fenómeno mundial” puede despistar bastante, la adaptación de las novelas de George R.R. Martin son una muestra de la televisión en su estado más puro, de que superproducción y “pequeña pantalla” no están reñidas. Si bien es cierto que las últimas temporadas se ha resentido en el guion, el nivel general ha sido más que sobresaliente. </detalle>
+    </elemento>
+    <elemento>
+        <nombre>Perdidos</nombre>
+        <foto>https://i.blogs.es/d73604/lost_cast/1366_2000.jpeg</foto>
+        <pie>Todos los personajes</pie>
+        <detalle>‘Perdidos’ no debería haber existido. Es un raro ejemplo de serie concebida por un alto ejecutivo de una cadena y que, no se sabe bien cómo, se transformó en todo un fenómeno gracias a saber fichar a los guionistas correctos con grandes ideas. El misterio de la isla nos llevó a lo largo de seis temporadas con las que lograron mantenernos en vilo y desesperarnos discutiendo teorías sobre lo que estaba pasando realmente.</detalle>
+    </elemento>
+    <elemento>
+        <nombre>Breaking bad</nombre>
+        <foto>https://i.blogs.es/b8c165/breaking_bad/1366_2000.jpeg</foto>
+        <pie>Portada de la temporada</pie>
+        <detalle>Reconozco que he tenido mis reparos a la hora de listar la excelente miniserie de Craig Mazin, sobre todo porque el juicio definitivo queda en manos del tiempo y solo han pasado unos meses desde la conclusión de esta obra maestra. Una sobresaliente exploración de la catástrofe nuclear que no solo se dedica a explorar la catástrofe en sí sino el barullo de mentiras y medias verdades que se difundieron (y todavía se difunden) en torno a ella.</detalle>
+    </elemento>
+</orla>
