@@ -23,7 +23,7 @@ function leerXML() {
       cargarArray(this);
     }
   };
-  xhr.open("GET", "https://marcosfa7.github.io/CMV-publico/17-05-FotosAvanzando.xml", true);
+  xhr.open("GET", "https://marcosfa7.github.io/CMV-publico/06-04-Viernes/datos.xml", true);
   // xhr.open("GET", "datos.xml", true);
   xhr.send();
 }
