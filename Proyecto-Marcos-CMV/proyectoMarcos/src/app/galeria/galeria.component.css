@@ -42,7 +42,7 @@ body {
   grid-row: 2 / span 1;
   position: relative;
   top: 100px;
-  background-color: rgba(148, 104, 54,0.1);
+  left: 5px;
   font-size: 20px;
 }
 
@@ -59,7 +59,7 @@ body {
   grid-column: 1 / span 4;
   grid-row: 4 / span 1;
   position: relative;
-  top: 100px;
+  top: 110px;
   font-size: 20px;
 }
 h1{
@@ -76,7 +76,9 @@ h1{
     border: 4px solid wheat;
     background-color: rgb(230, 255, 245, 0.2);
     border-radius: 10px;
-    width: 100%;
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .menu ul {
@@ -92,6 +94,9 @@ h1{
   
   .menu li {
     border-right: 1px solid white;
+    background-color: bisque;
+    border-radius: 5px ;
+    border-color: rgb(230, 255, 245, 0.2);
   }
   
   .menu li:hover {
@@ -103,11 +108,68 @@ h1{
     display: block;
     /*Para que el enlace tenga efecto en todo el rectángulo*/
     padding: 10px 20px;
-    color: #ffffff;
-    text-decoration: none;
+    color: rgb(148, 104, 54);
+    text-decoration:none;
+    text-align: center;
+  }
+
+  /*Botón día noche*/
+  :root {
+    --fuenteDia : #ff0000;
+    --fuenteNoche: black;
+}
+  .dia {
+    color: var(--fuenteDia);
+    background-color: gray;
+  }
+  
+  .noche {
+    color: var(--fuenteNoche);
+    background-color: #2c2a2a;
+  }
+  .boton{
+      float:left;
+      text-decoration: none;
+      padding: 10px;
+      font-weight: 600;
+      font-size: 20px;
+      color: #ffffff;
+      background-color: #1883ba;
+      border-radius: 6px;
+      border: 2px solid #0016b0;
+      
+  }
+  .CBoton{
+    margin-left: auto;
+    margin-right: auto;
+    left: 50%;
   }
   
   /*CSS EN ELEMENTOS BOOTSTRAP*/
-#peliculas{
-  width: 100%;
+  
+ .mi-container{
+   width: 80%;
+ }
+ .row{
+   margin-left: (spacer * .25);
+ }
+
+@media screen and (max-width: 900px) {
+  .menu {
+    position: absolute;
+  }
+}
+@media screen and (max-width: 600px) {
+  .contencabezado{
+    width: 100%;
+  }
+  .encabezado{
+    display: none;
+  }
+  .migas {
+    display: none;
+  }
+  .contenido {
+    display: block;
+  }
 }

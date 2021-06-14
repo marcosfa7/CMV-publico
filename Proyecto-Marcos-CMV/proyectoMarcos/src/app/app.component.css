@@ -39,7 +39,6 @@ body {
     grid-row: 2 / span 1;
     position: relative;
     top: 100px;
-    background-color: rgba(148, 104, 54,0.1);
     font-size: 20px;
   }
   
@@ -89,6 +88,8 @@ body {
     
     .menu li {
       border-right: 1px solid white;
+      background-color: bisque;
+      border-radius: 5px;
     }
     
     .menu li:hover {
