@@ -116,6 +116,7 @@ body {
       color: rgb(148, 104, 54);
       text-decoration:none;
       text-align: center;
+      font-weight: bold;
     }
   
     /*Botón día noche*/
@@ -145,6 +146,10 @@ body {
       left: 80%;
       top:40px;
     }
+
+    .negra{
+      color: black;
+    }
   
     .svg{
       position: absolute;
@@ -156,9 +161,6 @@ body {
         width: 100%;
         border-radius: 15px 15px 0px 0px;
       }
-      .col{
-      
-      }
       .carta{
         position: relative;
         transition: 1s ease-in-out;
@@ -168,6 +170,7 @@ body {
         perspective: 800;
         background-color: rgb(255,228,196);
         border-radius: 15px 15px 15px 15px;
+        margin: 10%;
       }
       .carta:hover{
         transform: rotateY(180deg);
@@ -202,10 +205,10 @@ body {
       }
     
     /*CSS EN ELEMENTOS BOOTSTRAP*/
-    
+    /*
    .mi-container{
      width: 0%;
-   }
+   }*/
   
   @media screen and (max-width: 900px) {
     .menu {
