@@ -204,7 +204,7 @@ body {
     /*CSS EN ELEMENTOS BOOTSTRAP*/
     
    .mi-container{
-     width: 80%;
+     width: 0%;
    }
   
   @media screen and (max-width: 900px) {

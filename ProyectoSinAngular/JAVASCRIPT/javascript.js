@@ -57,7 +57,7 @@ var peliculas = [];//Array con mis elementos
         <div class="col" style: "height: auto">
           <div class="carta" class="card shadow-sm" >
             <div class="adelante">
-              <img style="height:300px" src="`+ elemImg + `"/>
+              <img style="height:300px" src="`+ elemImg + `" alt="serie"/>
               <rect width="100%" height="100%" fill="#55595c"></rect><text class="tit" style="text-align:center; font-weight: bold;font-size: 40px;font-family: 'Indie Flower', cursive" x="50%" y="50%" fill="#eceeef">`+ elemTit + ` </text>
               
             </div>
