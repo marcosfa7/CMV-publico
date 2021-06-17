@@ -78,6 +78,7 @@ var peliculas = [];//Array con mis elementos
             $(".carta").toggleClass("noche");
             $(".encabezado").toggleClass("noche");
             $(".elementoMenu").toggleClass("noche");
+            $(".final").toggleClass("noche");
         });
 
     }
